@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+KafkaConnection:
+  RDM:
+    Primary: localhost:9092
+KafkaSession:
+  RDM:
+    PublishTopics:
+    SubscribeTopics:
+...

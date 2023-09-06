@@ -1,0 +1,38 @@
+%YAML 1.2
+---
+Strategy1:
+  StrategyFactory: getEMAStrategy
+  Params: 
+    TimeIntervals: 20,50
+    PrintStats: false
+    TimeHorizon: Min1
+    DecayFactorType: span
+    DecayFactors: 20,50
+# Strategy2:
+#   StrategyFactory: getEMAStrategy
+#   Params: 
+#     TimeIntervals: 0,200
+#     PrintStats: true
+#     DecayFactor: 0.25
+#     TimeHorizon: Day1
+# Strategy3:
+#   StrategyFactory: getEMAStrategy
+#   Params: 
+#     TimeIntervals: 9,21,55
+#     PrintStats: true
+#     DecayFactor: 0.9
+# Strategy4:
+#   StrategyFactory: getEMAStrategy
+#   Params: 
+#     TimeIntervals: 0,18,50
+#     PrintStats: true
+#     DecayFactor: 0.9
+#     TimeHorizon: Day1
+# Strategy5:
+#   StrategyFactory: getEMAStrategy
+#   Params: 
+#     TimeIntervals: 0
+#     PrintStats: true
+#     DecayFactor: 0.6
+#     TimeHorizon: MDEventDriven
+...

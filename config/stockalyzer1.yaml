@@ -1,0 +1,39 @@
+%YAML 1.2
+---
+KafkaConfiguration: !include ${CONFIG}/kafka1.yaml
+Resources:
+  ConfigurationManager:
+    EnforceControls: true
+  Modules:
+    ReferenceDataManager:
+      Universe: AAPL,AMZN,MSFT
+      Markets: !include ${CONFIG}/markets1.yaml
+    PortfolioManager:
+      Users: !include ${CONFIG}/users1.yaml
+    Controls:
+      EnforceControls: true
+StrategyConfiguration: !include ${CONFIG}/strategy1.yaml
+Logger: 
+  Level: DEBUG
+  OutputFile: ${OUTPUT}/logs/stockalyzer.log
+  DataFile: ${OUTPUT}/logs/data.txt
+Threads:
+  MarketDataThread:
+    Affinity:
+  # MdpSender: # For testing with fake market data
+  #   Strategy: gbm
+  #   WaitMillis: 1500 # TODO replacing WaitMilis with CycleSecs - still need waitmilli tho for ? idts
+  #   CycleSecs: 15
+  #   SymbolsPricesSpreads:
+  #     - AAPL,125.0,0.00000025,0.0005124
+  #     - MSFT,212.0,0.00000025,0.0005124
+  #     - AMZN,2140.0,0.00000025,0.0005124
+  WorkerThread:
+    Affinity:
+ApiKeys:
+  TD: RCWVO7FJII6FKTTPXXGKXKLFUNKF4CW9
+  Quandl: 6g6XGwzx8jM_spMbyLAx
+TestingSettings:
+  LatencyStatCollection: True
+  # MemoryStatCollection: True
+...

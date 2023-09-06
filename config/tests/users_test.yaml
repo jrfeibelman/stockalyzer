@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+jfeibs:
+  AccountId: 101
+  PrintStats: true
+TestAccount:
+  AccountId: 11
+...
+# Used for pulling portfolios, sending/receiving alerts/trades,  

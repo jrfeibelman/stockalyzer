@@ -1,0 +1,14 @@
+%YAML 1.2
+---
+YFTestMarket:
+  SecurityDefinition: config/tests/secdef_test.csv
+  FeedHandler:
+    Factory: getYFFeedHandler
+# SecurityDefinition: config/tests/secdef_test.csv
+# Sectors:
+#   SP500:
+#   NSDQ:
+#   DOWJ:
+
+
+...

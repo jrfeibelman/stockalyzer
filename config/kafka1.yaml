@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+KafkaConnection:
+  MainKafka:
+    Primary: 127.0.0.1:9092
+KafkaSession:
+  MainKafka:
+    PublishTopics:
+      StrategySignals:
+        Topic: signals
+    SubscribeTopics:
+      AmpsTopicKey1:
+        Topic: test
+        Command: query_and_subscribe
+      AmpsTopicKey2:
+        Topic: test2
+        Command: query_and_subscribe
+...

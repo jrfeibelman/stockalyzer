@@ -1,0 +1,39 @@
+%YAML 1.2
+---
+KafkaConfiguration: !include ${CONFIG}/tests/kafka_test.yaml
+Resources:
+  ConfigurationManager:
+    EnforceControls: true
+  Modules:
+    ReferenceDataManager:
+      Universe: AAPL,AMZN,MSFT,TSLA
+      Markets: !include ${CONFIG}/tests/markets_test.yaml
+    PortfolioManager:
+      Users: !include ${CONFIG}/tests/users_test.yaml
+    Controls:
+      EnforceControls: true
+StrategyConfiguration: !include ${CONFIG}/tests/strategy_test.yaml
+Logger: 
+  Level: DEBUG
+  OutputFile: ${OUTPUT}/logs/stockalyzer_test.log
+  DataFile: ${OUTPUT}/logs/data_test.txt
+Threads:
+  MarketDataThread:
+    Affinity:
+  # MdpSenderThread:
+  #   PoolSize: 1
+  #   WaitMillis: 1500
+  #   SymbolsPricesSpreads:
+  #     - AAPL,125.0,0.04
+  #     - MSFT,212.0,0.07
+  #     - AMZN,2140.0,0.01
+  #     - TSLA,670.5,0.025
+  WorkerThread:
+    Affinity:
+ApiKeys:
+  TD: RCWVO7FJII6FKTTPXXGKXKLFUNKF4CW9
+  Quandl: 6g6XGwzx8jM_spMbyLAx
+TestingSettings:
+  LatencyStatCollection: True
+  # MemoryStatCollection: True
+...

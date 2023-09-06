@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+KafkaConfiguration: !include ${CONFIG}/kafka1.yaml
+ServiceManager:
+  ReferenceDataService:
+    Universe: AAPL,AMZN,MSFT
+    Markets: !include ${CONFIG}/markets1.yaml
+Logger: 
+  Level: DEBUG
+  OutputFile: ${OUTPUT}/logs/mdgw.log
+Threads:
+  MarketDataThread:
+    PoolSize: 1
+ApiKeys:
+  TD: RCWVO7FJII6FKTTPXXGKXKLFUNKF4CW9
+  Quandl: 6g6XGwzx8jM_spMbyLAx
+...

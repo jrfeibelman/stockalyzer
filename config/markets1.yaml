@@ -1,0 +1,24 @@
+%YAML 1.2
+---
+YFTestMarket:
+  SecurityDefinition: config/secdef1.csv
+  FeedHandler:
+    Factory: getYFFeedHandler
+# TDTestMarket:
+#   SecurityDefinition: config/secdef2.csv
+#   FeedHandler:
+#     Factory: getTDFeedHandler
+#     ApiKey: RCWVO7FJII6FKTTPXXGKXKLFUNKF4CW9
+# CustomTCPMarket:
+#   SecurityDefinition: config/secdef1.csv
+#   FeedHandler:
+#     IP:
+#     Port:
+
+# Sectors:
+#   SP500:
+#   NSDQ:
+#   DOWJ:
+
+
+...
