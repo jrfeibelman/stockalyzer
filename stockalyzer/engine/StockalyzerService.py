@@ -18,6 +18,20 @@ from os import system, getpid
 from time import perf_counter
 
 """
+
+Done:
+    - functioning cache dict
+
+In Progress:
+    - Market Data Feed
+
+Backlog:
+    - async concurrent logger
+    - duplicate Stat from strategies issue
+    - triggering onSOD and onEOD events
+    - updating strategies stats & triggering timer events
+    
+
 TODO:
 -replace Singletons with Dependency injection or maybe Borg for RDM
 """

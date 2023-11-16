@@ -22,8 +22,8 @@ requirements = [
     "memory_profiler",
     "pathos",
     "ordered_set",
-    "scipy",
-    "statsmodels"
+    "pybind11",
+    "Cython"
 ]
 
 with open(vfile) as f:
@@ -34,7 +34,7 @@ with open('README.md') as f:
 
 setup(name=pkg_name,
       version=vers['__version__'],
-      author='J Feibelman',
+      author='JR Feibelman',
       author_email='jason.feibelman@gmail.com',
       maintainer_email='jason.feibelman@gmail.com',
       py_modules=[pkg_name],
@@ -47,7 +47,7 @@ setup(name=pkg_name,
       package_dir={'': pkg_location},
       packages=find_packages(where=pkg_location),
       install_requires=requirements,
-      python_requires=">=3.9",
+      python_requires=">=3.5",
       classifiers=['Development Status :: 3 - Alpha',
                    'Programming Language :: Python :: 3',
                    'Programming Language :: Python :: 3.6',
